@@ -30,14 +30,18 @@ This is the configuration for the 'pro' profile, which is a mysql
 datasource, using a mysql driver.
 
 `spring.datasource.url=jdbc:mysql://localhost:3306/liquibase-demo`
+
 `spring.datasource.username=root`
+
 `spring.datasource.password=root`
+
 `spring.datasource.driver-class-name=com.mysql.jdbc.Driver`
 
 This is the configuration for the 'test' profile, which is a H2 database
 running in MySql compatibility mode.
 
 `spring.datasource.url=jdbc:h2:mem:liquibase-demo;Mode=MySql`
+
 `spring.datasource.platform=h2`
 
 Depending on the profile active, one of the two is initialized and the
@@ -47,6 +51,7 @@ To execute a query using jdbc, have the jdbcTemplate injected which will
 go through this datasource.
 
 `@Inject`
+
 `private JdbcTemplate jdbcTemplate;`
 
 Liquibase
